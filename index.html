@@ -1,41 +1,28 @@
-<!DOCTYPE html><html lang="es">
-<head>
+<!DOCTYPE html><html lang="es"><head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Mis 15 - Isabela</title>
-<style> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Mis 15 - Isabela</title><style>
 
 body{
 margin:0;
-height:100vh;
+min-height:100vh;
 background-image:url("fondo.png");
 background-size:cover;
 background-position:center;
 font-family:Arial;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
 }
-</style>
-<Body>
 
-<h3 style="text-align:center;>Momentos de Isabela</h3> 
-  
-<div style="text-align:center; margin-top:20px;">
-  
-<img src="foto.png" style="width:180px;border-radius:15px;margin:8px;">
-
-</div>
-</Body>
-</html>
-</head>
-
-panel{
+.panel{
 background:rgba(0,0,0,0.45);
 padding:25px;
 border-radius:15px;
 text-align:center;
 color:white;
 max-width:350px;
+margin-bottom:30px;
 }
 
 #contador{
@@ -62,6 +49,18 @@ background:#25D366;
 color:white;
 }
 
+.galeria{
+text-align:center;
+margin-top:20px;
+}
+
+.galeria img{
+width:180px;
+border-radius:15px;
+margin:8px;
+box-shadow:0px 4px 12px rgba(0,0,0,0.4);
+}
+
 </style></head><body><div class="panel"><h2>Isabela</h2>
 <p>Mis 15 Años</p><div id="contador"></div><button class="maps"
 onclick="window.open('https://maps.google.com')">
@@ -73,6 +72,8 @@ onclick="window.open('https://wa.me/5492920214841')">
 Confirmar asistencia
 </button>
 
+</div><h3>Momentos de Isabela</h3><div class="galeria">
+<img src="foto.png">
 </div><script>
 
 var fechaFiesta = new Date("May 1, 2026 21:00:00").getTime();
@@ -91,18 +92,4 @@ document.getElementById("contador").innerHTML =
 
 },1000);
 
-</script></body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
+</script></body></html>
