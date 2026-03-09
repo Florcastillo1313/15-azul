@@ -1,94 +1,100 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html><html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Mis 15 Años</title>
-<style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mis 15 - Isabela</title><style>
 
 body{
-font-family: Arial, sans-serif;
+margin:0;
+font-family: 'Segoe UI', sans-serif;
 text-align:center;
-background: linear-gradient(#0b3d91,#5fa8ff);
 color:white;
-padding:40px;
+background: linear-gradient(180deg,#0d47a1,#64b5f6);
 }
 
-.card{
-background:rgba(255,255,255,0.1);
-padding:30px;
-border-radius:20px;
-max-width:500px;
-margin:auto;
+.container{
+padding:40px 20px;
 }
 
 h1{
-font-size:40px;
+font-size:55px;
+margin-bottom:10px;
 }
 
-.flor{
-font-size:30px;
+h2{
+font-size:28px;
+margin-top:0;
+}
+
+.flores{
+font-size:35px;
+margin:20px 0;
+}
+
+.card{
+background:rgba(255,255,255,0.15);
+border-radius:20px;
+padding:30px;
+max-width:500px;
+margin:auto;
+box-shadow:0 0 20px rgba(0,0,0,0.2);
 }
 
 #contador{
 font-size:30px;
-margin:20px 0;
+margin:25px 0;
 }
 
 button{
-background:white;
-color:#0b3d91;
-border:none;
-padding:15px 25px;
-border-radius:10px;
+display:block;
+width:100%;
+margin:10px 0;
+padding:15px;
 font-size:18px;
+border:none;
+border-radius:12px;
 cursor:pointer;
 }
 
-button:hover{
-background:#e0e0e0;
+.maps{
+background:white;
+color:#0d47a1;
 }
 
-</style>
-</head>
+.whatsapp{
+background:#25D366;
+color:white;
+}
 
-<body>
-
-<div class="card">
-
-<div class="flor">🌸 🌼 🌸</div>
-
-<h1>Mis 15 Años</h1>
-
-<p>Te invito a celebrar una noche mágica</p>
-
-<h2>Sábado 20 de Diciembre 2026</h2>
-
-<p>Faltan:</p>
-
-<div id="contador"></div>
-
-<button onclick="window.open('https://maps.google.com')">
-Ver ubicación
+</style></head><body><div class="container"><div class="flores">🌸💙🌸</div><h1>Isabela</h1>
+<h2>Mis 15 Años</h2><div class="card"><p>Te invito a celebrar este día tan especial</p><h3>1 de Mayo de 2026</h3><p>Faltan:</p><div id="contador"></div><button class="maps"
+onclick="window.open('https://maps.google.com')">
+📍 Ver ubicación
 </button>
 
-</div>
+<button class="whatsapp"
+onclick="window.open('https://wa.me/5492920214841')">
+Confirmar asistencia
+</button>
 
-<script>
+</div></div><script>
 
-var fechaFiesta = new Date("Dec 20, 2026 21:00:00").getTime();
+var fechaFiesta = new Date("May 1, 2026 21:00:00").getTime();
 
-var x = setInterval(function() {
+var x = setInterval(function(){
 
 var ahora = new Date().getTime();
 var distancia = fechaFiesta - ahora;
 
-var dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+var dias = Math.floor(distancia / (1000*60*60*24));
+var horas = Math.floor((distancia % (1000*60*60*24)) / (1000*60*60));
+var minutos = Math.floor((distancia % (1000*60*60)) / (1000*60));
 
-document.getElementById("contador").innerHTML = dias + " días";
+document.getElementById("contador").innerHTML =
+dias + " días " + horas + " hs " + minutos + " min";
 
-}, 1000);
+},1000);
 
-</script>
-
-</body>
+</script></body>
 </html>
+
